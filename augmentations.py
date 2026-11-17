@@ -17,6 +17,17 @@ def collage(batch_i, batch_j):
     interpolation = None
     
     ### YOUR CODE HERE
+    
+    interpolation = 0.5
+
+    half_of_the_image = im_size/2
+    
+    result = batch_i.copy()
+    
+    result[:, :half_of_the_image, :half_of_the_image] = batch_j[:, :half_of_the_image, :half_of_the_image]
+    result[:, half_of_the_image:, half_of_the_image:] = batch_j[:, half_of_the_image:, half_of_the_image:]
+    
+    
     ### END CODE
 
     return result, interpolation
