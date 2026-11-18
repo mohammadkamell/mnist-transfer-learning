@@ -43,6 +43,9 @@ def mixup(batch_i, batch_j, alpha=0.3):
     result = None
 
     ### YOUR CODE HERE
+    
+    result = interpolation * batch_i + (1 - interpolation) * batch_j
+    
     ### END CODE
 
     return result, interpolation
