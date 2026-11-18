@@ -24,8 +24,8 @@ def collage(batch_i, batch_j):
     
     result = batch_i.copy()
     
-    result[:, :half_of_the_image, :half_of_the_image] = batch_j[:, :half_of_the_image, :half_of_the_image]
-    result[:, half_of_the_image:, half_of_the_image:] = batch_j[:, half_of_the_image:, half_of_the_image:]
+    result[0:, :half_of_the_image, 0:half_of_the_image] = batch_j[:, 0:half_of_the_image, 0:half_of_the_image]
+    result[0:, half_of_the_image:, half_of_the_image:] = batch_j[:, half_of_the_image:, half_of_the_image:]
     
     
     ### END CODE
