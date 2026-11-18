@@ -69,7 +69,10 @@ class Net(nn.Module):
         """
         ### YOUR CODE HERE
         
+        x = self.apply_convs(x)
         
+        x = self.generalizer(x)
+
         
         ### END CODE
 
@@ -83,6 +86,11 @@ class Net(nn.Module):
         We first extract the convolutional features and then apply the pretraining head onto those.
         """
         ### YOUR CODE HERE
+        
+        x = self.apply_convs(x)
+        
+        x = self.pretrainer(x)
+        
         ### END CODE
 
         # Note: we use LOG SOFTMAX here, rather than just softmax.
