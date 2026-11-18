@@ -20,7 +20,7 @@ def collage(batch_i, batch_j):
     
     interpolation = 0.5
 
-    half_of_the_image = im_size/2
+    half_of_the_image = im_size//2
     
     result = batch_i.copy()
     
